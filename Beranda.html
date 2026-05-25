@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PiringBersama – Kurangi Food Waste, Berbagi Lebih Bermakna</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Beranda.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <img class="logo-img" src="https://c.animaapp.com/J1XjeMEv/img/logo-1@2x.png" width="40" height="40" alt="PiringBersama">
+      <span class="logo-text">PiringBersama</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Beranda</a>
+      <a href="#" class="nav-link">Menu</a>
+      <a href="#" class="nav-link">Tentang Kami</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notif-badge">3</span>
+      </button>
+      <div class="user-menu" onclick="this.querySelector('.dropdown-menu').classList.toggle('open')">
+        <div class="avatar">S</div>
+        <span>Hai, Safina</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        <div class="dropdown-menu">
+          <a href="#">👤 Profil Saya</a>
+          <a href="#">📦 Pesanan</a>
+          <a href="#">⚙️ Pengaturan</a>
+          <hr>
+          <a href="#" class="logout">🚪 Keluar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🌱 Platform Makanan Surplus</div>
+    <h1>Kurangi Food Waste,<br><span>Berbagi</span> Lebih Bermakna</h1>
+    <p class="hero-desc">PiringBersama menghubungkan makanan surplus dari restoran, kafe, dan toko roti dengan kamu yang peduli. Hemat uang, bantu sesama, jaga bumi.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">pelajari lebih lanjut →</a>
+      <a href="#" class="btn-outline">Jelajahi Menu ›</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="makananlatar.png" alt="Ilustrasi Makanan">
+</section>
+
+<!-- MAIN GRID -->
+<div class="main-grid">
+
+  <!-- Stats -->
+  <div class="stats-card">
+    <h3>Dampak Nyata<br><span>Bersama Komunitas</span></h3>
+    <div class="stat-item">
+      <div class="stat-icon green">🍽️</div>
+      <div>
+        <div class="stat-num green">2.500+</div>
+        <div class="stat-label">Porsi makanan terselamatkan</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon orange">🌿</div>
+      <div>
+        <div class="stat-num orange">1.200+ Kg</div>
+        <div class="stat-label">CO2 Berhasil dikurangi</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon blue">👥</div>
+      <div>
+        <div class="stat-num blue">1.330+</div>
+        <div class="stat-label">Pengguna aktif bergabung</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon purple">❤️</div>
+      <div>
+        <div class="stat-num purple">950+</div>
+        <div class="stat-label">Porsi disalurkan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Food Section -->
+  <div class="food-section">
+    <div class="food-header">
+      <h2>Makanan <span>Tersedia</span> Hari ini</h2>
+      <a href="#" class="btn-login-see">🔒 login untuk lihat selengkapnya ›</a>
+    </div>
+    <div class="food-cards">
+      <div class="food-card">
+        <img class="food-card-img" src="nasigor.png" alt="Nasi Goreng Spesial">
+        <div class="food-card-body">
+          <div class="food-card-name">Nasi Goreng Spesial</div>
+          <div class="food-card-price">Rp7.500</div>
+          <button class="btn-pesan">pesan</button>
+        </div>
+      </div>
+      <div class="food-card">
+        <img class="food-card-img" src="jajananpsr.png" alt="Jajanan Pasar">
+        <div class="food-card-body">
+          <div class="food-card-name">Jajanan Pasar</div>
+          <div class="food-card-price">Rp500</div>
+          <button class="btn-pesan">pesan</button>
+        </div>
+      </div>
+      <div class="food-card">
+        <img class="food-card-img" src="miecamp.png" alt="Mie Campur">
+        <div class="food-card-body">
+          <div class="food-card-name">Mie Campur</div>
+          <div class="food-card-price">Rp5.500</div>
+          <button class="btn-pesan">pesan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform card -->
+  <div class="platform-card">
+    <h3>platform <span>berbagi</span> makanan surplus</h3>
+    <p>Makanan berkualitas yang masih layak di konsumsi dengan harga spesial</p>
+    <div class="platform-features">
+      <div class="feat-item">
+        <div class="feat-icon">🤝</div>
+        <div class="feat-name">bantu sesama</div>
+        <div class="feat-desc">disalurkan ke yang membutuhkan</div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">💰</div>
+        <div class="feat-name">terjangkau</div>
+        <div class="feat-desc">harga terjangkau</div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">🌎</div>
+        <div class="feat-name">selamatkan bumi</div>
+        <div class="feat-desc">kurangi limbah</div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">🏪</div>
+        <div class="feat-name">selamatkan bumi</div>
+        <div class="feat-desc">resto, tempat dan pilihan</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-inner">
+    <div>
+      <h2>Yuk, Mulai Selamatkan Makanan Hari ini!</h2>
+      <p>Bersama PiringBersama, Kita bisa menciptakan perubahan untuk bumi yang lebih biak.</p>
+    </div>
+    <a href="#" class="btn-cta">Daftar Sekarang ›</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <img class="logo-icon" src="logok.jpeg" alt="PiringBersama">
+        <span class="logo-text">PiringBersama</span>
+      </div>
+      <p>Platform berbagi makanan surplus untuk mengurangi limbah makanan dan membantu sesama.</p>
+      <div class="social-links">
+        <a href="#">f</a>
+        <a href="#">in</a>
+        <a href="#">tw</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigasi</div>
+      <div class="footer-links">
+        <a href="#">Beranda</a>
+        <a href="#">Menu</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Cara Kerja</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Bantuan</div>
+      <div class="footer-links">
+        <a href="#">Pusat Bantuan</a>
+        <a href="#">Syarat &amp; Ketentuan</a>
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Hubungi Kami</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Untuk Partner</div>
+      <div class="footer-links">
+        <a href="#">Gabung Partner</a>
+        <a href="#">Panduan Partner</a>
+        <a href="#">Cerita Partner</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Download App</div>
+      <div class="store-buttons">
+        <a href="#" class="store-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        </a>
+        <a href="#" class="store-btn">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">©️ 2026 PiringBersama. Semua hak dilindungi.</div>
+</footer>
+
+<script src="Beranda.js"></script>
+</body>
+</html>
