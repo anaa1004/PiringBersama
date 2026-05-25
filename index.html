@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PiringBersama – Menu Makanan</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="logo_PiringBersama.jpeg" alt="Logo PiringBersama" class="logo-icon">
+      <span class="logo-text">PiringBersama</span>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Beranda</a>
+      <a href="#" class="nav-link active">Menu</a>
+      <a href="#" class="nav-link">Tentang Kami</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" title="Notifikasi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notif-badge">3</span>
+      </button>
+      <div class="user-menu" onclick="this.querySelector('.dropdown-menu').classList.toggle('open')">
+        <div class="avatar">SF</div>
+        <span>Hai, Safina</span>
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        <div class="dropdown-menu">
+          <a href="#">Profil Saya</a>
+          <a href="#">Riwayat Pesanan</a>
+          <a href="#">Pengaturan</a>
+          <hr>
+          <a href="#" class="logout">Keluar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+  <div class="announce-item">
+    <div class="announce-dot"></div>
+    Makanan berkualitas dengan <strong>&nbsp;harga spesial</strong>, bantu kurangi food waste bersama!
+  </div>
+  <div class="announce-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2d8a4e" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <strong>2.500+</strong>&nbsp;Porsi makanan telah diselamatkan
+  </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-wrap">
+  <div class="page-header">
+    <h1>Menu <span>Makanan</span></h1>
+    <p>Temukan makanan surplus berkualitas dari mitra kami terdekat.</p>
+  </div>
+
+  <div class="content-row">
+    <!-- FILTER SIDEBAR -->
+    <aside class="filter-sidebar">
+      <div class="filter-header">
+        <h3>Filter</h3>
+        <button class="reset-btn">
+          Reset
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        </button>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-section-title">Kategori</div>
+        <div class="radio-group">
+          <label class="radio-item active">
+            <input type="radio" name="kategori" value="semua" checked>
+            <span>🍽️ Semua Kategori</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="kategori" value="berat">
+            <span>🍛 Makanan Berat</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="kategori" value="camilan">
+            <span>🍿 Camilan</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="kategori" value="minuman">
+            <span>🥤 Minuman</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="kategori" value="roti">
+            <span>🥖 Roti & Bakery</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="kategori" value="lainnya">
+            <span>📦 Lainnya</span>
+          </label>
+        </div>
+      </div>
+
+      <hr class="filter-divider">
+
+      <div class="filter-section">
+        <div class="filter-section-title">Harga</div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox"> Di bawah Rp10.000
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> Rp10.000 – Rp20.000
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> Rp20.000 – Rp30.000
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> Di atas Rp30.000
+          </label>
+        </div>
+      </div>
+
+      <hr class="filter-divider">
+
+      <div class="filter-section">
+        <div class="filter-section-title">Jarak</div>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="jarak" value="semua"> Semua Jarak
+          </label>
+          <label class="radio-item active">
+            <input type="radio" name="jarak" value="2km" checked> Di bawah 2 km
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="jarak" value="5km"> 2 km – 5 km
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="jarak" value="lebih"> Di atas 5 km
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <div class="toolbar">
+        <select class="sort-select">
+          <option>Urutkan: Terdekat</option>
+          <option>Urutkan: Harga Termurah</option>
+          <option>Urutkan: Diskon Terbesar</option>
+          <option>Urutkan: Tersisa Sedikit</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            Grid
+          </button>
+          <button class="view-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            List
+          </button>
+        </div>
+      </div>
+
+      <div class="food-grid">
+        <!-- Card 1 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="nasgor.jpeg" alt="Nasi Goreng Spesial">
+            <span class="discount-badge">30% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Nasi Goreng Spesial</div>
+            <div class="card-prices">
+              <span class="price-new">Rp24.500</span>
+              <span class="price-old">Rp35.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              500 m • Kedai Nusantara
+            </div>
+            <div class="card-footer">2 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="chicken salad.jpg" alt="Chicken Salad">
+            <span class="discount-badge">25% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Chicken Salad</div>
+            <div class="card-prices">
+              <span class="price-new">Rp22.500</span>
+              <span class="price-old">Rp30.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              800 m • Green Bowl
+            </div>
+            <div class="card-footer">3 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="sandwich.jpg" alt="Sandwich Tuna">
+            <span class="discount-badge">20% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Sandwich Tuna</div>
+            <div class="card-prices">
+              <span class="price-new">Rp16.000</span>
+              <span class="price-old">Rp20.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              1.2 km • Roti Bahagia
+            </div>
+            <div class="card-footer">2 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="roti coklat.jpeg" alt="Roti Cokelat">
+            <span class="discount-badge">20% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Roti Cokelat</div>
+            <div class="card-prices">
+              <span class="price-new">Rp14.000</span>
+              <span class="price-old">Rp20.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              600 m • Dapur Roti
+            </div>
+            <div class="card-footer">5 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="mi ayam jamur.jpg" alt="Mie Ayam Jamur">
+            <span class="discount-badge">25% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Mie Ayam Jamur</div>
+            <div class="card-prices">
+              <span class="price-new">Rp15.000</span>
+              <span class="price-old">Rp20.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              1.1 km • Mie Sehat
+            </div>
+            <div class="card-footer">2 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="es lemon.jpg" alt="Es Lemon Mint">
+            <span class="discount-badge">20% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Es Lemon Mint</div>
+            <div class="card-prices">
+              <span class="price-new">Rp10.000</span>
+              <span class="price-old">Rp12.500</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              700 m • Segar Bistro
+            </div>
+            <div class="card-footer">4 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="croissant.jpeg" alt="Croissant Original">
+            <span class="discount-badge">25% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Croissant Original</div>
+            <div class="card-prices">
+              <span class="price-new">Rp12.000</span>
+              <span class="price-old">Rp16.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              900 m • Baker's House
+            </div>
+            <div class="card-footer">3 porsi tersisa</div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="food-card">
+          <div class="card-img-wrap">
+            <img src="rice bowl.png" alt="Chicken Rice Bowl">
+            <span class="discount-badge">25% OFF</span>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Chicken Rice Bowl</div>
+            <div class="card-prices">
+              <span class="price-new">Rp21.000</span>
+              <span class="price-old">Rp30.000</span>
+            </div>
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              1.3 km • RiceUp
+            </div>
+            <div class="card-footer">2 porsi tersisa</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination">
+        <button class="page-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="logo_PiringBersama.jpeg" alt="Logo PiringBersama" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+        <span style="font-size:16px;font-weight:800;color:var(--green);margin-left:8px;">PiringBersama</span>
+      </div>
+      <p>Platform berbagi makanan surplus untuk mengurangi limbah makanan dan membantu sesama.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigasi</div>
+      <div class="footer-links">
+        <a href="#">Beranda</a>
+        <a href="#">Menu</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Cara Kerja</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Bantuan</div>
+      <div class="footer-links">
+        <a href="#">Pusat Bantuan</a>
+        <a href="#">Syarat &amp; Ketentuan</a>
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Hubungi Kami</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Untuk Partner</div>
+      <div class="footer-links">
+        <a href="#">Gabung Partner</a>
+        <a href="#">Panduan Partner</a>
+        <a href="#">Cerita Partner</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Download App</div>
+      <div class="store-buttons">
+        <a href="#" class="store-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        </a>
+        <a href="#" class="store-btn">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">©️ 2026 PiringBersama. Semua hak dilindungi.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

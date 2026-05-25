@@ -6,8 +6,5 @@ loginButton.addEventListener('click', () => {
   setTimeout(() => {
     loginButton.innerText = 'Masuk';
     alert('Login berhasil!');
-
-    window.location.href = "beranda.html";
-    
   }, 1500);
 });
