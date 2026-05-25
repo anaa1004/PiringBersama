@@ -7,7 +7,7 @@ loginButton.addEventListener('click', () => {
     loginButton.innerText = 'Masuk';
     alert('Login berhasil!');
 
-    window.location.href = "beranda.html";
+    window.location.href = "Beranda.html";
     
   }, 1500);
 });
