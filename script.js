@@ -18,3 +18,10 @@
       this.classList.add('active');
     });
   });
+
+  // Klik card menuju detail menu
+document.querySelectorAll('.food-card').forEach(card => {
+  card.addEventListener('click', () => {
+    window.location.href = 'MenuDetail.html';
+  });
+});
